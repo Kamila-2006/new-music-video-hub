@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Team{% endblock %}
+
+{% block content %}
+    <section class="page-header">
+        <h1 class="animated-text">Team</h1>
+    </section>
+    <section class="music-list">
+        {% for track in tracks %}
+            <div class="music-item glass-effect">
+                    <img src="{track.character_image}" alt="{{ track.character }}">
+                    <div class="music-info">
+                        <h3>{{ track.character }}</h3>
+                    </div>
+            </div>
+        {% empty %}
+            <h3>No persons</h3>
+        {% endfor %}
+    </section>
+{% endblock %}
