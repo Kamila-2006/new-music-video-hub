@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Music List - MusicVideoHub{% endblock %}
+
+{% block content %}
+    <section class="page-header">
+        <h1 class="animated-text">Video Collection</h1>
+    </section>
+    <section class="music-list">
+        {% for video in videos %}
+            <div class="music-item glass-effect">
+                    <img src="{{ video.cover_image.url }}" alt="{{ track.title }}">
+                    <div class="music-info">
+                        <h3>{{ track.title }}</h3>
+                    </div>
+                    <div class="music-actions">
+                        <a href="{% url 'tracks:music-detail' track.id %}" class="btn btn-info"><i class="fas fa-info-circle"></i></a>
+                    </div>
+            </div>
+        {% empty %}
+            <h3>No Tracks</h3>
+        {% endfor %}
+    </section>
+
+{% endblock %}
