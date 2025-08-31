@@ -7,9 +7,9 @@
         <h1 class="animated-text">Team</h1>
     </section>
     <section class="music-list">
-        {% for character in tracks %}
+        {% for character in characters %}
             <div class="music-item glass-effect">
-                    <img src="{{ character.image }}" alt="{{ character.name }}">
+                    <img src="{{ character.image.url }}" alt="{{ character.name }}">
                     <div class="music-info">
                         <h3>{{ character.name }}</h3>
                     </div>
