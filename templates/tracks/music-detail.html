@@ -5,7 +5,7 @@
 {% block content %}
     <section class="page-header">
         <h1 class="animated-text">Music Detail</h1>
-        <a href="{% url 'tracks:music-list' %}" class="btn"><i class="fas fa-arrow-left"></i> Back to List</a>
+        <a href="{% url 'tracks:tracks-list' %}" class="btn"><i class="fas fa-arrow-left"></i> Back to List</a>
     </section>
 
     <section class="music-detail glass-effect">
@@ -23,10 +23,6 @@
                     <source src="{{ track.audio_file.url }}" type="audio/mpeg">
                     Your browser does not support the audio element.
                 </audio>
-            </div>
-            <div class="action-buttons">
-                <a href="{% url 'tracks:music-update' track.id %}" class="btn btn-edit"><i class="fas fa-edit"></i> Edit</a>
-                <a href="{% url 'tracks:music-delete' track.id %}" class="btn btn-danger"><i class="fas fa-trash"></i> Delete</a>
             </div>
         </div>
     </section>
