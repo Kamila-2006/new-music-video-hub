@@ -5,7 +5,7 @@
 {% block content %}
     <section class="page-header">
         <h1 class="animated-text">Music Detail</h1>
-        <a href="{% url 'tracks:tracks-list' %}" class="btn"><i class="fas fa-arrow-left"></i> Back to List</a>
+        <a href="{% url 'tracks:tracks-list' track.character.id %}" class="btn"><i class="fas fa-arrow-left"></i> Back to List</a>
     </section>
 
     <section class="music-detail glass-effect">
@@ -17,7 +17,7 @@
             <p class="artist">by {{ track.artist }}</p>
             <p class="album">Album: {{ track.album }}</p>
             <p class="genre">Genre: {{ track.genre }}</p>
-            <p class="release-date">Released: {{ track.release_date }}</p>
+            <p class="release-date">Released: {{ track.release_year }}</p>
             <div class="music-player">
                 <audio controls>
                     <source src="{{ track.audio_file.url }}" type="audio/mpeg">

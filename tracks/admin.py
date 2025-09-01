@@ -15,7 +15,7 @@ class TrackAdmin(admin.ModelAdmin):
         'artist',
         'album',
         'genre',
-        'release_date',
+        'release_year',
         'cover_image',
         'audio_file'
     ]

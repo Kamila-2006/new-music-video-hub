@@ -8,7 +8,7 @@
     </section>
     <section class="music-list">
         {% for track in tracks %}
-            <a class="music-item glass-effect" href="{% url 'tracks:music-detail' track.id %}">
+            <a class="music-item glass-effect" href="{% url 'tracks:track-detail' track.id %}">
                     <img src="{{ track.cover_image.url }}" alt="{{ track.title }}">
                     <div class="music-info">
                         <h3>{{ track.title }}</h3>
